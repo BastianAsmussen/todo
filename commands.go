@@ -36,7 +36,7 @@ func completeTask(taskID int) error {
 func newAddCmd() *cobra.Command {
 	return &cobra.Command{
 		Use:   "add [description]",
-		Short: "Add a new task.",
+		Short: "Add a new task",
 		Args:  cobra.MinimumNArgs(1),
 		Run: func(cmd *cobra.Command, args []string) {
 			description := args[0]
@@ -112,7 +112,7 @@ func newListCmd() *cobra.Command {
 func newCompleteCmd() *cobra.Command {
 	return &cobra.Command{
 		Use:   "complete [taskID]",
-		Short: "Mark a task as complete.",
+		Short: "Mark a task as complete",
 		Args:  cobra.ExactArgs(1),
 		Run: func(cmd *cobra.Command, args []string) {
 			taskID, err := strconv.Atoi(args[0])
